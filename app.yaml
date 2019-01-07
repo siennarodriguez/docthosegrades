@@ -1,0 +1,14 @@
+#runtime: python27
+runtime: nodejs
+env: flex
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: Main Page/index.html
+  upload: Main Page/index.html
+
+- url: /(.*)
+  static_files: Main Page/\1
+  upload: Main Page/(.*)
